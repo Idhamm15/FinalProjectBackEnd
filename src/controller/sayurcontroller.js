@@ -44,7 +44,7 @@ module.exports = {
         let{id} = req.params;
         let{body} = req;
 
-        foods.update(body, {
+        s.update(body, {
             where:{id}
         })
         .then((data) => {
@@ -65,7 +65,7 @@ module.exports = {
     },
     deletesayur: (req, res) => {
         let{id} = req.params;
-        foods.destroy({
+        s.destroy({
             where:{id}
         })
         .then((data) => {
@@ -86,7 +86,7 @@ module.exports = {
     },
     getsayurByID: (req, res) =>{
         let{id} = req.params;
-        foods.findOne({
+        s.findOne({
             where:{id}
         })
         .then((data)=> {
